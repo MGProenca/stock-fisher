@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# uv
+# (uv.lock IS committed; the venv is not)
+
+# Data artifacts
+data/cache/
+data/output/*
+# ...except the committed processed dataset, so reviewers can reproduce the
+# model instantly (uv run chess-train) without re-fetching from the API.
+!data/output/titled_tuesday.parquet
+
+# MLflow tracking store
+data/mlflow.db
+data/mlartifacts/
+mlruns/
+mlartifacts/
